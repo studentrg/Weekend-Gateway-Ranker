@@ -1,9 +1,12 @@
 # 🌍 Weekend Travel Recommendation Engine
 
-A **Python-based travel recommendation system** that suggests the **best weekend destinations** based on a user-selected source city.  
-The system intelligently ranks destinations using **distance proximity, ratings, popularity, visit feasibility, and airport accessibility**.
+The Weekend Getaway Ranker is a data-driven recommendation system that suggests the best weekend travel destinations from a given source city in India.
+Destinations are ranked based on:
 
----
+Distance from the source city
+Tourist rating
+Popularity score
+The project uses Python and Pandas to process and rank destinations efficiently.
 
 ## 🎯 Problem Statement
 
@@ -16,11 +19,13 @@ Given a **source city**, recommend the **top weekend travel destinations** by co
 
 ---
 
-## 🧠 Recommendation Strategy
+Objective
 
-Since the dataset does **not contain latitude/longitude**, distance is approximated using:
-- **Zone-based filtering** (hard constraint)
-- **State-level preference** (soft constraint)
+To build a simple data engineering pipeline that:
+Takes a source city as input
+Calculates distance to nearby destinations
+Ranks destinations using multiple weighted factors
+Returns the top recommended weekend getaways
 
 ### Feature Weights Used
 
@@ -93,38 +98,19 @@ Visualizes how distance, rating, airport access, and visit time contribute to th
 
 Improves interpretability & explainability
 
-### ✅ Key Highlights
 
-✔ User-selected source city
 
-✔ Dataset-driven (no hard-coded states)
+Future Enhancements
 
-✔ Realistic weekend travel logic
+Add real-time distance calculation using Google Maps API
 
-✔ Handles missing geo-coordinates intelligently
+Convert to a REST API
 
-✔ Explainable scoring system
+Add user preference-based recommendations
 
-✔ Visualized recommendations
-
-### 🎓 Academic Justification
-
-“Due to the absence of geographical coordinates, a hierarchical proximity model using zone and state information was applied. Visit duration and airport accessibility were incorporated to improve weekend travel feasibility.”
-
-### 🚀 Future Enhancements
-
-Add user-adjustable weights
-
-Include budget-based filtering
-
-Convert into a Flask web application
-
-Add map-based visualization
-
-Support personalized recommendations
-
+Visualization of rankings using charts
 ### 👤 Author
 
-Ankit Mandal
+Rinki Ghosh
 B.Tech CSE
 India
